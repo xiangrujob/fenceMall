@@ -13,5 +13,5 @@ ID
 
 */
 public class Store {
-
+    // TODO: 银河之力
 }

@@ -18,5 +18,5 @@ ID
 
 */
 public class User {
-
+    // TODO: 银河之力
 }

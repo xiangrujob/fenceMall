@@ -1,4 +1,4 @@
-import com.fence.view.Index;
+import com.fence.views.Index;
 
 /*
 主函数

@@ -10,5 +10,5 @@ ID
 
 */
 public class Good {
-
+    // TODO: 银河之力
 }
