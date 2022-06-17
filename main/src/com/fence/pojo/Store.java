@@ -13,5 +13,51 @@ ID
 
 */
 public class Store {
+    private int id;//ID
+    private String name;//商家名
+    private Good[] goods;//商品
+    private double earnPrice;//营收额
+
+    public Store() {
+    }
+
+    public Store(int id, String name, Good[] goods, double earnPrice) {
+        this.id = id;
+        this.name = name;
+        this.goods = goods;
+        this.earnPrice = earnPrice;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Good[] getGoods() {
+        return goods;
+    }
+
+    public void setGoods(Good[] goods) {
+        this.goods = goods;
+    }
+
+    public double getEarnPrice() {
+        return earnPrice;
+    }
+
+    public void setEarnPrice(double earnPrice) {
+        this.earnPrice = earnPrice;
+    }
     // TODO: 银河之力
 }
