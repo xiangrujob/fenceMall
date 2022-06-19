@@ -1,5 +1,7 @@
 package com.fence.pojo;
 
+import java.util.ArrayList;
+
 /*
 用户类
 
@@ -23,20 +25,19 @@ public class User {
     private String password;
     private String passwordPrompt;
     private double balance;
-    private String[] address;
-    private Good[] shoppingCart;
+    private ArrayList<String> address = new ArrayList<>();
+    private ArrayList<Good> shoppingCart = new ArrayList<>();
+    private ArrayList<Good> purchasedGoods = new ArrayList<>();
 
     public User() {
     }
 
-    public User(int id, String username, String password, String passwordPrompt, double balance, String[] address, Good[] shoppingCart) {
+    public User(int id, String username, String password, String passwordPrompt, double balance) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.passwordPrompt = passwordPrompt;
         this.balance = balance;
-        this.address = address;
-        this.shoppingCart = shoppingCart;
     }
 
     public int getId() {
@@ -79,20 +80,29 @@ public class User {
         this.balance = balance;
     }
 
-    public String[] getAddress() {
+    public ArrayList<String> getAddress() {
         return address;
     }
 
-    public void setAddress(String[] address) {
+    public void setAddress(ArrayList<String> address) {
         this.address = address;
     }
 
-    public Good[] getShoppingCart() {
+    public ArrayList<Good> getShoppingCart() {
         return shoppingCart;
     }
 
-    public void setShoppingCart(Good[] shoppingCart) {
+    public void setShoppingCart(ArrayList<Good> shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
     // TODO: 银河之力
+
+    public ArrayList<Good> getPurchasedGoods() {
+        return purchasedGoods;
+    }
+
+    public void setPurchasedGoods(ArrayList<Good> purchasedGoods) {
+        this.purchasedGoods = purchasedGoods;
+    }
+
 }
