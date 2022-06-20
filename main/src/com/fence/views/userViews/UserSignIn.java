@@ -4,7 +4,6 @@ import com.fence.pojo.User;
 import com.fence.service.UserService;
 import com.fence.utils.MainUtil;
 
-// TODO: 余戬
 public class UserSignIn {
 
     private static void view() {
@@ -20,7 +19,7 @@ public class UserSignIn {
         System.out.println(id);
         System.out.print("密码:");
         String password = MainUtil.sc.nextLine();
-        boolean login = UserService.login(id, password);
+        boolean login = UserService.logIn(id, password);
         if (login) {
             UserPage.userPage();
         } else {

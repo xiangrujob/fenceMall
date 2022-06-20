@@ -72,5 +72,4 @@ public class Store {
     public void setEarnPrice(double earnPrice) {
         this.earnPrice = earnPrice;
     }
-    // TODO: 银河之力
 }

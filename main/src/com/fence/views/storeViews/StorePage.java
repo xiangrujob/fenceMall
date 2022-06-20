@@ -10,7 +10,6 @@ import com.sun.xml.internal.bind.v2.model.core.ID;
 /**
 商家界面
 */
-// TODO: 拾梦
 public class StorePage {
 
 
@@ -20,9 +19,8 @@ public class StorePage {
         System.out.println("0:返回商家登录界面（可登录下一个商家账号）");
         System.out.println("1:商品入库");
 //        System.out.println("2:修改商品");
-        System.out.println("3:删除商品"); // TODO
+        System.out.println("3:删除商品");
 //        System.out.println("4:清空商品");
-        // TODO: 查看所有商品
     }
 
     private static void operate() {
@@ -47,11 +45,20 @@ public class StorePage {
                     break;
                     //if( ==false ){}接收返回值，false则表明此操作完毕
                 case 3:
-                    StoreService.modifyGoodPrice(new Store(), new Good());
-//                case 3 -> {
-//                    StoreService.deleteGood(new Store(), new Good());
-//                }
-//                case 4 -> StoreService.clearGoods(new Store());
+                    System.out.println("请输入需要删除的商品 id:");                   //创建商品
+                    int id = MainUtil.sc.nextInt();
+                    StoreService.removeGood(id);
+                    break;
+                case 5:
+                    System.out.println("此商店下的全部商品：");
+                    System.out.println("序号 id 名字 价格 库存");
+                    int num = 1;
+                    for (Good g : StoreService.getGoods()) {
+                        System.out.println(num + " " + g.getId() + " " + g.getName() +
+                                " " + g.getPrice() + " " + g.getStock());
+                        num++;
+                    }
+                    break;
             }
         }
     }

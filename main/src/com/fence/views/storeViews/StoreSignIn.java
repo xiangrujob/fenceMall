@@ -4,7 +4,6 @@ import com.fence.service.StoreService;
 import com.fence.utils.MainUtil;
 import com.fence.views.Index;
 
-// TODO: 拾梦
 public class StoreSignIn {
 
     private static void view() {

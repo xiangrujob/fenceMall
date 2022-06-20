@@ -1,6 +1,7 @@
 package com.fence.pojo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /*
 用户类
@@ -26,8 +27,8 @@ public class User {
     private String passwordPrompt;
     private double balance;
     private ArrayList<String> address = new ArrayList<>();
-    private ArrayList<Good> shoppingCart = new ArrayList<>();
-    private ArrayList<Good> purchasedGoods = new ArrayList<>();
+    private HashMap<Good, Integer> shoppingCart = new HashMap<>();
+    private HashMap<Good, Integer> purchasedGoods = new HashMap<>();
 
     public User() {
     }
@@ -88,20 +89,19 @@ public class User {
         this.address = address;
     }
 
-    public ArrayList<Good> getShoppingCart() {
+    public HashMap<Good, Integer> getShoppingCart() {
         return shoppingCart;
     }
 
-    public void setShoppingCart(ArrayList<Good> shoppingCart) {
+    public void setShoppingCart(HashMap<Good, Integer> shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
-    // TODO: 银河之力
 
-    public ArrayList<Good> getPurchasedGoods() {
+    public HashMap<Good, Integer> getPurchasedGoods() {
         return purchasedGoods;
     }
 
-    public void setPurchasedGoods(ArrayList<Good> purchasedGoods) {
+    public void setPurchasedGoods(HashMap<Good, Integer> purchasedGoods) {
         this.purchasedGoods = purchasedGoods;
     }
 
